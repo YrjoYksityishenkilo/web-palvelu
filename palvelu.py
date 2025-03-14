@@ -5,6 +5,7 @@ def app(environ, respond):
     polku = environ["PATH_INFO"]
     salanimi = polku.replace("a", "aca").replace("i", "hani").replace("n", "nono")
     yield "<p>moikka</p>".encode('utf-8')
+    yield "<form method=GET><input type=button value=paina></form>".encode("utf-8")
     yield (f"Salainen nimesi on: <b>{salanimi}<b>".encode('utf-8'))
     #for key in environ:
         #yield("%s: %s\n" %(key, environ[key])).encode('utf-8')
